@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/cruds1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management System</title>
+</head>
+<body>
+    
+        <div class="d-flex justify-content-end mb-2">
+            <button id="theme-toggle" class="btn btn-outline-secondary" style="width:auto;">
+                <span id="theme-icon" class="me-1">🌙</span> Theme
+            </button>
+        </div>
+        <div id="alert-area"></div>
+        <div class="d-flex flex-column align-items-center justify-content-center" style="margin-bottom:2rem;">
+            <img src="static/nyx_logo.png" alt="NYX Logo" style="width:64px;height:64px;border-radius:16px;object-fit:cover;">
+            <span style="font-weight:700;font-size:2rem;color:#3182ce;letter-spacing:2px;margin-top:0.5rem;">NYX team</span>
+        </div>
+        <div class="crud card shadow-sm p-4">
+            <div class="head text-center mb-4">
+                <h2 class="mb-1">Saif Fadhil</h2>
+                <p class="text-muted">Product Management System</p>
+            </div>
+            <div class="inputs row g-3 mb-4">
+                <div class="col-md-6">
+                    <input autofocus placeholder="Title" type="text" id="title" class="form-control">
+                </div>
+                <div class="col-md-6 price row g-2">
+                    <div class="col-6 col-lg-3">
+                        <input onkeyup="getTotal()" placeholder="Price" type="number" id="price" class="form-control">
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <input onkeyup="getTotal()" placeholder="Tax" type="number" id="tax" class="form-control">
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <input onkeyup="getTotal()" placeholder="Ads" type="number" id="ads" class="form-control">
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <input onkeyup="getTotal()" placeholder="Discount" type="number" id="discount" class="form-control">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <small id="total" class="badge bg-info text-dark fs-6"></small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <input placeholder="Count" type="number" id="count" class="form-control">
+                </div>
+                <div class="col-md-5">
+                    <input placeholder="Category" type="text" id="category" class="form-control">
+                </div>
+                <div class="col-md-4 d-grid">
+                    <button id="submit" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+            <div class="outputs">
+                <div class="search row g-2 mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <input onkeyup="searchdata(this.value)" type="text" id="search" placeholder="Search" class="form-control">
+                    </div>
+                    <div class="col-md-6 btnser d-flex gap-2">
+                        <button onclick="getsermode(this.id)" id="searchtitle" class="btn btn-outline-secondary">Search by Title</button>
+                        <button onclick="getsermode(this.id)" id="searchcategory" class="btn btn-outline-secondary">Search by Category</button>
+                    </div>
+                </div>
+                <div id="deleteAll" class="mb-3"></div>
+                <div class="mb-3 d-flex gap-2">
+                    <button id="export-csv" class="btn btn-outline-success btn-sm">Export CSV</button>
+                    <button id="export-json" class="btn btn-outline-info btn-sm">Export JSON</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th data-sort="id" style="cursor:pointer">Id</th>
+                                <th data-sort="title" style="cursor:pointer">Title</th>
+                                <th data-sort="price" style="cursor:pointer">Price</th>
+                                <th data-sort="taxes" style="cursor:pointer">Taxes</th>
+                                <th data-sort="ads" style="cursor:pointer">Ads</th>
+                                <th data-sort="discount" style="cursor:pointer">Discount</th>
+                                <th data-sort="total" style="cursor:pointer">Total</th>
+                                <th data-sort="category" style="cursor:pointer">Category</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="src/Cruds2.js"></script>
+
+    <footer class="text-center py-3 mt-5" style="background: #f8fafc; color: #2a4365; font-size: 1rem; border-top: 1px solid #e2e8f0;">
+        Created by Saif Fadhil. &copy; 2024 All rights reserved.
+    </footer>
+</body>
+</html>
