@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modern Product Management CRUD App
 
 A modern, responsive web application for managing products (Create, Read, Update, Delete) with a beautiful UI, built using HTML, CSS (with Bootstrap), and JavaScript.
@@ -42,3 +43,7 @@ modern-crud-app/
 ├── index.html
 └── README.md
 ``` 
+=======
+# CRUDS-project
+product management system with modern style  
+>>>>>>> 8670d36bc1a699fe7bb0a3b5794d5b01f662053f
