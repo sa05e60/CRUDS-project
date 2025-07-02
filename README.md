@@ -13,7 +13,7 @@ A modern, responsive web application for managing products (Create, Read, Update
 - Input validation and user feedback
 
 ## 🖥️ Demo
-[Live on Netlify](https://your-netlify-link.netlify.app) <!-- Replace with your actual Netlify link -->
+https://productmanagmentsystem22.netlify.app <!-- Replace with your actual Netlify link -->
 
 ## 📸 Screenshots
 ![image](https://github.com/user-attachments/assets/8fa3a2f3-bc07-4533-a5e0-c56a677fe4e7)
